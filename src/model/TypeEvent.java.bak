@@ -1,0 +1,6 @@
+package model;
+
+public enum TypeEvent{
+	
+	MANTENIMIENTO, COLEGIO, ACTIVDAD_DE_MEJORAMIENTO, CELEBRACION
+}
