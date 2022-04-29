@@ -17,7 +17,17 @@ public class Humedal{
     private Event[] events;
 
     //Methods
-	//usado para la evaluacio pratica , int like
+	//usado para la evaluacion pratica , int like
+	/**
+	*Humedal.<br>
+	*The constructor for the class Humedal.<br>
+	*<b>pos: </b>The arrays for the species and the events are initialized
+	*@param name, The name of the humedal.
+	*@param location, a number indicating the the location of the humedal(1. for rural, 2. for urban).
+	*@param tipe, a number indicating the type of the humedal(1. for public 2. for private).
+	*@param url, the url from a phot of the humedal.
+	*@param protect, a boolean variable saying if the humedal is protected or no.
+	*/
     public Humedal(String name, int location, int tipe, String url, boolean protect){
         this.name=name;
 		switch(location){
@@ -38,23 +48,42 @@ public class Humedal{
 		}      
         this.url=url;
         this.protect=protect;
-		//this.like=like;
+		//usado para la evaluacion pratica this.like=like;
 		species=new Specie[MAX_SPECIES];
 		events=new Event[MAX_EVENTS];
     }
-
+	
+	/**
+	*getName.<br>
+	*returns the name of the humedal.<br>
+	*@return name, the name of the humedal.
+	*/
     public String getName(){
         return name;
     }
-
+	
+	/**
+	*setName.<br>
+	*The method sets the name of the humedal.<br>
+	*@param name, name of the humedal.
+	*/
     public void setName(String name){
         this.name=name;
     }
-
+	
+	/**
+	*getLocation.<br>
+	*Returns the location from the humedal(RURAL or URBAN).<br>
+	*@return location, the location from the humedal.
+	*/
     public UbicationType getLocation(){
         return location;
     }
-
+	/**
+	*setLocation.<br>
+	*Sets the location of the humedal.<br>
+	*@param location, a number indicating the the location of the humedal(1. for rural, 2. for urban).
+	*/
     public void setLocation(int location){
        switch(location){
 			case 1:
@@ -65,10 +94,21 @@ public class Humedal{
 			break;
 		}
     }
+	
+	/**
+	*getTipe.<br>
+	*returns the type of the humedal(PUBLIC or PRIVATE).<br>
+	*@return tipe, the tipe of the humedal.
+	*/
     public HumedalType getTipe(){
         return tipe;
     }
 
+	/**
+	*setTipe.<br>
+	*Sets the tipe of the humedal.<br>
+	*@param tipe, a number indicating the type of the humedal(1. for public 2. for private).
+	*/
     public void setTipe(int tipe){
         switch(tipe){
 			case 1:
@@ -79,10 +119,21 @@ public class Humedal{
 			break;
 		}
     }
+	
+	/**
+	*getUrl.<br>
+	*Returns the url from the photo of the humedal.<br>
+	*@return url, the url from the photo of the humedal.
+	*/
     public String getUrl(){
         return url;
     }
-
+	
+	/**
+	*setUrl.<br>
+	*Sets the url.
+	*@param url.
+	*/
     public void setUrl(String url){
         this.url=url;
     }
@@ -95,7 +146,7 @@ public class Humedal{
         this.protect=protect;
     }
 	
-	/*
+	/* usado para la evaluacion pratica
 	public int getLike(){
 		return like;
 	}

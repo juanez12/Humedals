@@ -66,7 +66,7 @@ public class Dagma{
 	public boolean existHumedal(String nH){
 		boolean found=false;
 		for(int i=0; i<MAX_HUMEDALS && !found; i++){
-			if(humedals[i].getName().equals(nH))
+			if(humedals[i]!=null && humedals[i].getName().equals(nH))
 				found=true;
 		}
 		return found;
@@ -99,6 +99,7 @@ public class Dagma{
 					break;
 				}
 				humedals[i]=new Humedal(nameH, loc, tipeH, urlH, option);
+				continuar=false;
 				//, likeHu
 			}
 			else if(existHumedal(nameH))

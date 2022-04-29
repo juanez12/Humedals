@@ -46,62 +46,65 @@ public class Main{
 			System.out.println("9. Give like to an humedal");
 			System.out.println("10. Show how many likes have the humedals");
 			System.out.println("11. Show the humedal with the most amount of likes");
+			option=lector.nextInt();
+			lector.nextLine();
+
+			switch(option){
+				case 0:
+					System.out.println("Exiting from the program, see you later");
+				break;
+				case 1:
+					String result1=principal.addHumedal();
+					System.out.println(result1);
+				break;
+				
+				case 2:
+					String result2=principal.addSpecie();
+					System.out.println(result2);
+				break;
+				
+				case 3:
+					String result3=principal.addEvent();
+					System.out.println(result3);
+				break;
+				case 4:
+					String result4=principal.showMantenience();
+					System.out.println(result4);
+				break;
+				case 5:
+					String result5=principal.lessFlora();
+					System.out.println(result5);
+				break;
+				case 6: 
+					String result6=principal.searchSpecie();
+					System.out.println(result6);
+				break;
+				case 7:
+					String result7=principal.infoHumedal();
+					System.out.println(result7);
+				break;
+				case 8:
+					String result8=principal.mostAnimals();
+					System.out.println(result8);
+				break;
+				/*
+				usado para la evaluacion practica
+				case 9:
+					String result9=principal.giveLikes();
+				break;
+				case 10:
+					String result10=principal.showLikes();
+					System.out.println(result10);
+				break;
+				case 11:
+					String result11=principal.showMostLikes();
+					System.out.println(result11);
+				break;*/
+				default: System.out.println("Invalid option please select a valid option");
+			}
 			
 		}while(option!=0);
 		
-		switch(option){
-			case 0:
-				System.out.println("Exiting from the program, see you later");
-			break;
-			case 1:
-				String result1=principal.addHumedal();
-				System.out.println(result1);
-			break;
-			
-			case 2:
-				String result2=principal.addSpecie();
-				System.out.println(result2);
-			break;
-			
-			case 3:
-				String result3=principal.addEvent();
-				System.out.println(result3);
-			break;
-			case 4:
-				String result4=principal.showMantenience();
-				System.out.println(result4);
-			break;
-			case 5:
-				String result5=principal.lessFlora();
-				System.out.println(result5);
-			break;
-			case 6: 
-				String result6=principal.searchSpecie();
-				System.out.println(result6);
-			break;
-			case 7:
-				String result7=principal.infoHumedal();
-				System.out.println(result7);
-			break;
-			case 8:
-				String result8=principal.mostAnimals();
-				System.out.println(result8);
-			break;
-			/*
-			usado para la evaluacion practica
-			case 9:
-				String result9=principal.giveLikes();
-			break;
-			case 10:
-				String result10=principal.showLikes();
-				System.out.println(result10);
-			break;
-			case 11:
-				String result11=principal.showMostLikes();
-				System.out.println(result11);
-			break;*/
-			default: System.out.println("Invalid option please select a valid option");
-		}
 		
     }
 	
